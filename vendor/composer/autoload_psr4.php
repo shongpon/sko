@@ -31,6 +31,7 @@ return array(
     'kartik\\plugins\\fileinput\\' => array($vendorDir . '/kartik-v/bootstrap-fileinput'),
     'kartik\\plugins\\depdrop\\' => array($vendorDir . '/kartik-v/dependent-dropdown'),
     'kartik\\plugins\\dateformatter\\' => array($vendorDir . '/kartik-v/php-date-formatter'),
+    'kartik\\mpdf\\' => array($vendorDir . '/kartik-v/yii2-mpdf'),
     'kartik\\icons\\' => array($vendorDir . '/kartik-v/yii2-icons'),
     'kartik\\helpers\\' => array($vendorDir . '/kartik-v/yii2-helpers'),
     'kartik\\growl\\' => array($vendorDir . '/kartik-v/yii2-widget-growl'),

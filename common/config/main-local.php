@@ -3,16 +3,16 @@ return [
     'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=127.0.0.1;dbname=yii2advanced',
-            'username' => 'root',
-            'password' => '',
+            'dsn' => 'mysql:host=203.157.145.17;dbname=analysis_hdc',
+            'username' => 'newbaa',
+            'password' => 'Fvg8zjkowfh',
             'charset' => 'utf8',
         ],
-        'db_sko' => [
+        'db2' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=203.157.145.16;dbname=a6',
-            'username' => 'childdev',
-            'password' => 'childdevSakaeo',
+            'dsn' => 'mysql:host=203.157.145.17;dbname=varidate_icd',
+            'username' => 'newbaa',
+            'password' => 'Fvg8zjkowfh',
             'charset' => 'utf8',
         ],
         'mailer' => [
