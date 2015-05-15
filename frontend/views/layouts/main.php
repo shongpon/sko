@@ -26,19 +26,22 @@ AppAsset::register($this);
     <div class="wrap">
         <?php
             NavBar::begin([
-                'brandLabel' => 'My Company',
+                'brandLabel' => '<span class="glyphicon glyphicon-th-large"></span> ระบบรายงานสุขภาพจังหวัดสระแก้ว',
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
                     'class' => 'navbar-inverse navbar-fixed-top',
                 ],
             ]);
-            $menuItems = [
+/*            $menuItems = [
                 ['label' => 'Home', 'url' => ['/site/index']],
                 ['label' => 'Push', 'url' => ['/site/push']],
+                ['label' => 'Reports','url' => ['/query/queryfp']],               
                 ['label' => 'Campaign', 'url' => ['/campaign/index']],
+                ['label' => 'CheckICD', 'url' => ['/checkicds/checkicds']],
                 ['label' => 'About', 'url' => ['/site/about']],
                 ['label' => 'Contact', 'url' => ['/site/contact']],
-            ];
+            ]; 
+ */
             if (Yii::$app->user->isGuest) {
                 $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
                 $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
@@ -52,7 +55,30 @@ AppAsset::register($this);
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
                 'items' => $menuItems,
-            ]);
+             'options' => ['class' => 'navbar-nav navbar-right'],
+    'encodeLabels' => false,
+    'items' => [
+        ['label' => '<span class="glyphicon glyphicon-home"></span> หน้าแรก', 'url' => ['/site/index']],
+        ['label' => '<span class="glyphicon glyphicon-pencil"></span> push', 'url' => ['/site/push']],
+        ['label' => '<span class="glyphicon glyphicon-list-alt"></span> รายงาน',
+            'items'=>[['label'=>'FP','url'=>['query/queryfp']]]
+            ],
+        ['label' => '<span class="glyphicon glyphicon-tasks"></span> Campaign', 'url' => ['/campaign/index']],
+        ['label' => '<span class="glyphicon glyphicon-ok"></span> CheckICD',
+            'items'=>[
+                       ['label'=>'A รหัส ICD ตามบริบท','url'=>['checkicds/checkicda1']],
+                       ['label'=>'B รหัส ICD ตามแนวมาตราฐาน','url'=>['checkicds/checkicdb3']],
+                       ['label'=>'C รหัส ICD ที่ไม่ควรใช้','url'=>['checkicds/checkicdc1']],                
+                 ]
+            ],
+        ['label' => '<span class="glyphicon glyphicon-globe"></span> แผนที่', 'url' => ['/map/map']],
+  //    ['label' => '<span class="glyphicon glyphicon-envelope"></span> About', 'url' => ['/site/about']],
+        ['label' => '<span class="glyphicon glyphicon-envelope"></span> ติดต่อเรา', 'url' => ['/site/contact']],
+        ['label' => '<span class="glyphicon glyphicon-user"></span> ลงชื่อเข้าใช้', 'url' => ['/site/login']],
+                   
+        
+       
+             ]]);
             NavBar::end();
         ?>
 
