@@ -10,6 +10,7 @@ is a separate Yii application.
 The template is designed to work in a team development environment. It supports
 deploying the application in different environments.
 
+Test...
 
 DIRECTORY STRUCTURE
 -------------------
