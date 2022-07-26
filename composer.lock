@@ -21,7 +21,6 @@
                 "shasum": ""
             },
             "require": {
-                "guzzlehttp/guzzle": "4.*",
                 "yiisoft/yii2": "*"
             },
             "type": "yii-extension",
